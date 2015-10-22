@@ -1,3 +1,33 @@
+function addScrollMagic () {
+	var controller = new ScrollMagic.Controller();
+
+	//SCENE 1
+
+	var scene1 = new ScrollMagic.Scene({
+		triggerElement: '#native',
+		triggerHook: 'onEnter',
+		duration: '70%'
+	})
+	.setTween("#background-opacity", {backgroundColor: "rgba(31, 30, 52, 1)"});
+	scene1.addTo(controller);
+
+	var scene2 = new ScrollMagic.Scene({
+		triggerElement: "#native",
+		triggerHook: "onEnter",
+		duration: '100%'
+	}).addTo(controller)
+	  .setTween("#iphone-overlay", 1, {width: "50%", y: 0});
+
+	  var scene3 = new ScrollMagic.Scene({
+	  	triggerElement: '#touch',
+	  	triggerHook: 'onEnter',
+	  	duration: "100%"
+	  }).addTo(controller)
+	  	.addIndicators({name: "pin iphone"})
+	  	.setPin("#iphone-overlay");
+}
+
+
 function animateLogo() {
     TweenMax.fromTo("#react-logo", 2, {
         // from
@@ -104,4 +134,5 @@ window.onload = function() {
     animateRobot();
     updateSliderControl();
     addSmoothScrolling();
+    addScrollMagic ()
 };
