@@ -81,10 +81,10 @@ a:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(31, 30, 52, 1));
 }
 
-.react-logo{
+/*.react-logo{
   position: relative;
   z-index: 999;
-}
+}*/
 
 .section1  h1{
   margin: 5px auto;

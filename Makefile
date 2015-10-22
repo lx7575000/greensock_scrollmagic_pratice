@@ -1,6 +1,6 @@
 .PHONY: server
 server:
-	browser-sync start --server --files="index.html,css/main.css"
+	browser-sync start --server --files="index.html,css/main.css,js/app.js"
 
 .PHONY: css
 css:
